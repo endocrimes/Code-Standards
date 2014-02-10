@@ -56,7 +56,7 @@ In single-line comments, the `//` should always be followed by one space.
 
 ### Multi-Line Comments
 
-In multi-line comments, `/*` and `*/` should each be one their own line, with the comment body on one or more lines between them. Each line in between should begin with a `*`, followed by one space. All of the `*`s of a mulit-line comment should line up - each line of a comment after the first line should be indented by one extra space. Blank lines are permissible in multi-line comments, but they should still be prefixed with a `*`.
+In multi-line comments, `/*` and `*/` should each be one their own line, with the comment body on one or more lines between them. Each line in between should begin with a `*`, followed by one space. All of the `*`s of a mulit-line comment should line up - each line of a comment after the first line should be indented by one extra space. Blank lines are permissible in multi-line comments, but they should still be prefixed with a `*`. The line after `/*` and the line before `*/` should not be blank.
 
 #### Example
 
