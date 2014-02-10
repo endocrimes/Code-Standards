@@ -15,6 +15,7 @@ If you're looking to see some of the reasons behind some choices, or for somethi
 
 ## Table of Contents
 
+* [Comments](#comments)
 * [Dot-Notation Syntax](#dot-notation-syntax)
 * [Categories](#categories)
 * [Spacing](#spacing)
@@ -34,6 +35,55 @@ If you're looking to see some of the reasons behind some choices, or for somethi
 * [Booleans](#booleans)
 * [Singletons](#singletons)
 * [Xcode Project](#xcode-project)
+
+## Comments
+
+### Single-Line Comments
+
+In single-line comments, the `//` should always be followed by one space.
+
+Single-line comments should always be placed on the line before the code that they describe, unless the relevant code is only one line and the comment and line of code combined are less than 80 characters. In this case, the comment may appear on the same line as the code, with the code preceding the comment.
+
+**For Example:**
+
+```objc
+// this is a comment
+```
+
+**Not:**
+
+```objc
+//this is a comment
+```
+
+### Multi-Line Comments
+
+In multi-line comments, `/*` and `*/` should each be one their own line, with the comment body on one or more lines between them. Each line in between should begin with a `*`, followed by one space. All of the `*`s of a mulit-line comment should line up - each line of a comment after the first line should be indented by one extra space. Blank lines are permissible in multi-line comments, but they should still be prefixed with a `*`. The line after `/*` and the line before `*/` should not be blank.
+
+**For Example:**
+
+```objc
+/*
+ * This is a comment.
+ *
+ * Still a comment.
+ */
+```
+
+**Not:**
+
+```objc
+/* This is a comment.
+Still a comment. */
+```
+
+### Differences between Single- and Multi-Line Comments
+
+Single line comments should be used if the content of the comment is a single sentence and it fits comfortably on a single line. In all other circumstances, a multi-line comment should be used.
+
+Single-line comments are not required to start with a capital letter, and they should only do so if the first word of the comment would still be capitalised in the middle of the sentence. Single line comments should only end with a punctuation mark in the case of question marks.
+
+Multi-line comments should be composed of proper English sentences with capitalised first letters and all appropriate punctuation marks should be present. Lines of a multi-line comment should be wrapped at *apporximately* 80 characters for readability, depending on the context.
 
 ## Dot-Notation Syntax
 
@@ -70,11 +120,11 @@ Should work regardless of its implementation detail.
 ```objc
 if (user.isHappy) 
 {
-//Do something
+// do something
 }
 else 
 {
-//Do something else
+// do something else
 }
 ```
 * There should be exactly one blank line between methods to aid in visual clarity and organisation. Whitespace within methods should separate functionality, but often there should probably be new methods.
@@ -127,7 +177,7 @@ When methods return an error parameter by reference, switch on the returned valu
 NSError *error;
 if (![self trySomethingWithError:&error]) 
 {
-    // Handle Error
+    // handle Error
 }
 ```
 
@@ -137,7 +187,7 @@ NSError *error;
 [self trySomethingWithError:&error];
 if (error) 
 {
-    // Handle Error
+    // handle Error
 }
 ```
 
@@ -253,7 +303,7 @@ Block comments should generally be avoided, as code should be as self-documentin
 {
     self = [super init]; 
     if (self) {
-        // Custom initialisation
+        // custom initialisation
     }
 
     return self;
