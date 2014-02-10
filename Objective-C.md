@@ -75,6 +75,14 @@ In multi-line comments, `/*` and `*/` should each be one their own line, with th
 Still a comment. */
 ```
 
+### Differences between Single- and Multi-Line Comments
+
+Single line comments should be used if the content of the comment is a single sentence and it fits comfortably on a single line. In all other circumstances, a multi-line comment should be used.
+
+Single-line comments are not required to start with a capital letter, and they should only do so if the first word of the comment would still be capitalised in the middle of the sentence. Single line comments should only end with a punctuation mark in the case of question marks.
+
+Multi-line comments should be composed of proper English sentences with capitalised first letters and all appropriate punctuation marks should be present. Lines of a multi-line comment should be wrapped at *apporximately* 80 characters for readability, depending on the context.
+
 ## Dot-Notation Syntax
 
 Dot-notation should **always** be used for accessing and mutating properties. Bracket notation is preferred in all other instances.
