@@ -120,11 +120,11 @@ Should work regardless of its implementation detail.
 ```objc
 if (user.isHappy) 
 {
-//Do something
+// do something
 }
 else 
 {
-//Do something else
+// do something else
 }
 ```
 * There should be exactly one blank line between methods to aid in visual clarity and organisation. Whitespace within methods should separate functionality, but often there should probably be new methods.
@@ -177,7 +177,7 @@ When methods return an error parameter by reference, switch on the returned valu
 NSError *error;
 if (![self trySomethingWithError:&error]) 
 {
-    // Handle Error
+    // handle Error
 }
 ```
 
@@ -187,7 +187,7 @@ NSError *error;
 [self trySomethingWithError:&error];
 if (error) 
 {
-    // Handle Error
+    // handle Error
 }
 ```
 
@@ -303,7 +303,7 @@ Block comments should generally be avoided, as code should be as self-documentin
 {
     self = [super init]; 
     if (self) {
-        // Custom initialisation
+        // custom initialisation
     }
 
     return self;
