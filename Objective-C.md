@@ -44,7 +44,7 @@ In single-line comments, the `//` should always be followed by one space.
 
 Single-line comments should always be placed on the line before the code that they describe, unless the relevant code is only one line and the comment and line of code combined are less than 80 characters. In this case, the comment may appear on the same line as the code, with the code preceding the comment.
 
-#### Example
+**For Example:**
 
 ```objc
 // this is a comment
