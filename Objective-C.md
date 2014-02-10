@@ -15,6 +15,7 @@ If you're looking to see some of the reasons behind some choices, or for somethi
 
 ## Table of Contents
 
+* [Comments](#comments)
 * [Dot-Notation Syntax](#dot-notation-syntax)
 * [Categories](#categories)
 * [Spacing](#spacing)
@@ -34,6 +35,45 @@ If you're looking to see some of the reasons behind some choices, or for somethi
 * [Booleans](#booleans)
 * [Singletons](#singletons)
 * [Xcode Project](#xcode-project)
+
+## Comments
+
+### Single-Line Comments
+
+In single-line comments, the `//` should always be followed by one space.
+
+#### Example
+
+```objc
+// this is a comment
+```
+
+**Not:**
+
+```objc
+//this is a comment
+```
+
+### Multi-Line Comments
+
+In multi-line comments, `/*` and `*/` should each be one their own line, with the comment body on one or more lines between them. Each line in between should begin with a `*`, followed by one space. All of the `*`s of a mulit-line comment should line up - each line of a comment after the first line should be indented by one extra space. Blank lines are permissible in multi-line comments, but they should still be prefixed with a `*`.
+
+#### Example
+
+```objc
+/*
+ * This is a comment.
+ *
+ * Still a comment.
+ */
+```
+
+**Not:**
+
+```objc
+/* This is a comment.
+Still a comment. */
+```
 
 ## Dot-Notation Syntax
 
