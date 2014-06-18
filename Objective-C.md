@@ -64,16 +64,14 @@ Should work regardless of its implementation detail.
 ## Spacing
 
 * Indent using 4 spaces. Never indent with tabs. Be sure to set this preference in Xcode. 
-* Method braces and other braces (`if`/`else`/`switch`/`while` etc.) always open on a new line.
+* Method braces and other braces (`if`/`else`/`switch`/`while` etc.) always open on the same line
 
 **For example:**
 ```objc
-if (user.isHappy) 
-{
+if (user.isHappy) {
 //Do something
 }
-else 
-{
+else {
 //Do something else
 }
 ```
@@ -86,8 +84,7 @@ Conditional bodies should always use braces even when a conditional body could b
 
 **For example:**
 ```objc
-if (!error) 
-{
+if (!error) {
     return success;
 }
 ```
@@ -125,8 +122,7 @@ When methods return an error parameter by reference, switch on the returned valu
 **For example:**
 ```objc
 NSError *error;
-if (![self trySomethingWithError:&error]) 
-{
+if (![self trySomethingWithError:&error]) {
     // Handle Error
 }
 ```
@@ -135,8 +131,7 @@ if (![self trySomethingWithError:&error])
 ```objc
 NSError *error;
 [self trySomethingWithError:&error];
-if (error) 
-{
+if (error) {
     // Handle Error
 }
 ```
@@ -249,8 +244,7 @@ Block comments should generally be avoided, as code should be as self-documentin
 `init` methods should be structured like this:
 
 ```objc
-- (instancetype)init 
-{
+- (instancetype)init {
     self = [super init]; 
     if (self) {
         // Custom initialisation
@@ -339,8 +333,7 @@ This allows for more consistency across files and greater visual clarity.
 **For example:**
 
 ```objc
-if (!someObject) 
-{
+if (!someObject) {
 // Code
 }
 ```
@@ -348,8 +341,7 @@ if (!someObject)
 **Not:**
 
 ```objc
-if (someObject == nil) 
-{
+if (someObject == nil) {
 // Code
 }
 ```
@@ -383,8 +375,7 @@ Text and example taken from the [Cocoa Naming Guidelines](https://developer.appl
 
 Singleton objects should use a thread-safe pattern for creating their shared instance.
 ```objc
-+ (instancetype)sharedInstance 
-{
++ (instancetype)sharedInstance {
    static id sharedInstance = nil;
 
    static dispatch_once_t onceToken;
