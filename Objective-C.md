@@ -364,6 +364,24 @@ if (isAwesome == YES) // Never do this.
 
 -----
 
+When casting a variable to a boolean, either implicity or explicitly, always use a double exclamation mark to safely convert the value of a variable to a boolean.
+
+```objc
+(BOOL)!!someNonBooleanVariable
+BOOL myBoolean = !!someNonBooleanVariable;
+```
+
+**Not:**
+
+```objc
+(BOOL)someNonBooleanVariable
+BOOL myBoolean = someNonBooleanVariable;
+```
+
+In the "Not" examples, what happens if `someNonBooleanVariable` happens to equal 256?
+
+-----
+
 If the name of a `BOOL` property is expressed as an adjective, the property can omit the “is” prefix but specifies the conventional name for the get accessor, for example:
 
 ```objc
